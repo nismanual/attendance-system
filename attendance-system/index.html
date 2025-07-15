@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Attendance</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <a href="view.html" class="link" data-aos="fade-down" data-aos-delay="100">📊 Attendance Viewer</a>
+  <div class="container" data-aos="zoom-in">
+    <h1 data-aos="fade-up" data-aos-delay="200">📖 Attendance Book</h1>
+
+    <form id="attendanceForm" data-aos="fade-up" data-aos-delay="300">
+      <input type="text" id="name" placeholder="Enter your name" required data-aos="fade-right" data-aos-delay="400">
+      <input type="text" id="roll" placeholder="Enter your roll number" required data-aos="fade-left" data-aos-delay="500">
+      <div class="buttons" data-aos="zoom-in" data-aos-delay="600">
+        <button type="submit" id="presentBtn" data-aos="fade-right" data-aos-delay="700">✓ Present</button>
+        <button type="button" id="absentBtn" data-aos="fade-left" data-aos-delay="700">X Absent</button>
+      </div>
+    </form>
+
+    <div id="message" style="margin-top: 20px;" data-aos="fade-in" data-aos-delay="800"></div>
+    <p id="successMessage" class="success-message" data-aos="fade-in" data-aos-delay="900"></p>
+
+    <p class="note" data-aos="fade-up" data-aos-delay="1000">Your attendance will be recorded in real-time.</p>
+  </div>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script src="app.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
